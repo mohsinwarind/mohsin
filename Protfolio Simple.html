@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mohsin - Portfolio</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+    <!-- Add your custom CSS for dark theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+     <style>
+        body {
+            background-color: #1c1c1c;
+            color: #ffffff;
+            
+        }
+
+        .fadeIn {
+            opacity: 0;
+            transition: opacity 3.5s ease-in-out;
+        }
+        .fadeIn.show {
+            opacity: 1;
+        }
+
+        .name-wrapper {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .name-underline {
+            width: 120px;
+            height: 3px;
+            background-color: #ffffff;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .name-wrapper:hover .name-underline {
+            opacity: 1;
+        }
+        .name-text {
+            font-size: 48px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            line-height: 1.2;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            transition: color 0.6s ease-in-out;
+        }
+        .name-text:hover {
+            color: #4c4a42; /* Add your preferred color on hover */
+        }
+
+        .book-cover {
+            max-width: 300px;
+            transition: transform 0.3s ease-in-out, opacity 3.5s ease-in-out; /* Combined transitions */
+        }
+        .book-cover:hover {
+            transform: scale(1.1); /* Adjust the scale factor as desired */
+        }
+          
+        
+    #about h2 {
+        transition: opacity 0.6s ease-in-out; /* Add opacity transition */
+    }
+
+    #about h2:hover {
+        opacity: 0.5; /* Set the desired opacity on hover */
+    }
+
+/* Apply the fade-in transition to elements with the fadeInOnHover class */
+.fadeInOnHover {
+    opacity: 0.7; /* Initial opacity when not hovered */
+    transition: opacity 0.3s ease-in-out; /* Apply the transition effect to opacity property */
+}
+
+/* Change the opacity to 1 when hovered over */
+.fadeInOnHover:hover {
+    opacity: 2;
+}
+
+
+  
+In this code, a new image-wrapper class is added to create a container for the image. This container helps in applying the pop-out effect more precisely. The transition property is added to the image-wrapper class to ensure smooth animation.
+
+When you hover over the image with the image-pop class, it will scale up by 10%, creating a pop-out effect. You can adjust the scale value and transition duration as needed to achieve the desired effect.
+
+Feel free to experiment with the values to achieve the look you want.
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mohsin Ramzan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#social-media">Social Media</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="py-5 text-center">
+        <div class="container">
+            <img src="Fractured Nation Cover.png" id="Book Cover" class="img-fluid mb-4 book-cover fadeIn fadeIn" style="max-width: 300px;">
+            <div class="name-wrapper fadeIn">
+              <h1 class="name-text fadeIn">Mohsin Ramzan</h1>
+              <div class="name-underline"></div>
+          </div>
+          <div class="name-wrapper" > 
+            <p class="lead name-text fadeIn">Author of "Fractured Nation"</p>
+          </div>
+
+            <p class="fadeIn">The plight of these minority communities persists,
+               with their fundamental rights and freedoms being
+                violated on a regular basis. The absence of strong
+                 and effective measures to protect them perpetuates
+                  their marginalization and suffering, pushing them 
+                  further into the shadows of society. It is essential
+                   for the authorities to take decisive actions and 
+                   implement comprehensive policies that safeguard the
+                    rights of religious minorities and eradicate the 
+                    menace of forced conversions in Pakistan. Only 
+                    through proactive and determined efforts can the
+                     country truly provide equal protection and
+                      justice to all its citizens, regardless of 
+                      their faith.</p>
+            <a href="#about" class="btn btn-dark fadeIn">Download Here</a>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="text-center">
+            <h2>About Me</h2>
+            <div class="image-wrapper">
+                <img src="Mohsin.jpeg" alt="Mohsin" class="img-fluid rounded-circle border mb-3 fadeInOnHover" style="width: 300px; height: 300px;">
+            </div>
+            <p style="text-align: center;">
+                A quiet wanderer, forever captivated by the world of books,
+                entranced by the realm of web design, and devoted to the art of storytelling.
+                Books are my sanctuary, granting refuge from the chaos of reality.
+                Design is my sanctuary, where I craft digital dreams and orchestrate 
+                visual harmonies that resonate with the soul. Writing is my sanctuary,
+                a medium through which I unveil the truths that often go unsaid. 
+                A meek boy who finds strength in the power of words, solace in the 
+                embrace of design, and purpose in the stories woven through existence. 
+                With every turn of a page, every pixel perfectly placed, and every word
+                meticulously chosen,I aspire to find beauty in the ordinary and meaning 
+                in the mundane.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Coursera Certificates Section -->
+<section id="certificates" class="py-5 text-center">
+    <div class="container">
+        <h2>Certificates</h2>
+        <div class="certificate-list">
+            <div class="certificate-item">
+                <h4>Introduction to HTML5</h4>
+                <p>University of Michigan</p>
+                <p><strong>Grade Achieved: 93.16%</strong></p>
+                <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~AXUXBUWHV52V/CERTIFICATE_LANDING_PAGE~AXUXBUWHV52V.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            </div>
+            <div class="certificate-item">
+                <h4>Introduction to CSS3</h4>
+                <p>University of Michigan</p>
+                <p><strong>Grade Achieved:99.06% </strong></p>
+                <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~RJS82BNTXNHH/CERTIFICATE_LANDING_PAGE~RJS82BNTXNHH.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            </div>
+            <div class="certificate-item">
+                <h4>Interactivity with JavaScript</h4>
+                <p>University of Michigan</p>
+                <p><strong>Grade Achieved:100% </strong></p>
+                <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~UN78AK3Q2JDA/CERTIFICATE_LANDING_PAGE~UN78AK3Q2JDA.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            </div>
+            <div class="certificate-item">
+                <h4>Advance Styling with Responsive Design</h4>
+                <p>University of Michigan</p>
+                <p><strong>Grade Achieved:98.52% </strong></p>
+                <a href="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~AW4NHSAEWFHG/CERTIFICATE_LANDING_PAGE~AW4NHSAEWFHG.jpeg" target="_blank" class="btn btn-dark">View Certificate</a>
+            </div>
+            <!-- Add more certificate items as needed -->
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Publications Section -->
+<section id="publications" class="py-5 text-center">
+    <div class="container">
+        <h2>Publications</h2>
+        <div class="publications-list">
+            <div class="publications-item">
+                <h4>The Corruption Chronicles:</h4>
+                <h5>Cheating for Cash in the Examination Center</h5>
+                <p>A disheartening tale that reveals the disturbing truth of academic dishonesty and its impact on the integrity of the educational examination system.</p>
+                <a href="https://timesglo.com/the-corruption-chronicles-cheating-for-cash-in-the-examination-center/amp/" target="_blank" class="btn btn-dark">Read By Timesglo</a>
+                <a href="https://thestudentsherald.com/the-corruption-chronicles-in-examination-centres/" target="_blank" class="btn btn-dark">Read By The Students' Herald</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Social Media Section -->
+<section id="social-media" class="py-5 text-center">
+    <div class="container">
+        <h2>Social Media</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com/mohsin.ramzan.376" target="_blank" class="btn btn-dark btn-icon">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://twitter.com/Mmohsinwarind?t=olOpGbKQGZRwr21CM_83ow&s=09" target="_blank" class="btn btn-dark btn-icon">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://instagram.com/m_mohhsin?igshid=NjIwNzIyMDk2Mg==" target="_blank" class="btn btn-dark btn-icon">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://mohsinramzan999.blogspot.com/?m=1" target="_blank" class="btn btn-secondary btn-icon">
+    <i class="fab fa-blogger"></i> Blogger
+</a>
+
+            <!-- Add more social media links as needed -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Add Bootstrap JS and other scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.fadeIn').addClass('show');
+      });
+    </script>
+
+    
+</body>
+</html>
