@@ -8,6 +8,7 @@
 
 
 {% block body %}
+<section class="blog-list"> 
 <h2 class="heading"> My Writeups</h2>
 <div class="blog-grid">
   {% for post in posts %}
@@ -18,5 +19,6 @@
   {% endfor %}
 </div>
 
+</section>
 
 {% endblock body %}

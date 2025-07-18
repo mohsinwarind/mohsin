@@ -12,3 +12,7 @@ def home(request):
         HttpResponse: Rendered home page template.
     """
     return render(request, 'about/home.html')  # Ensure 'about/home.html' exists in your templates directory.
+
+
+def about(request):
+    return render (request, "about/about.html")
