@@ -1,0 +1,1 @@
+from my_site.wsgi import application as app
