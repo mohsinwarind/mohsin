@@ -1,3 +1,5 @@
-from my_site.wsgi import application as app
+import os
+from django.core.wsgi import get_wsgi_application
 
-# https://mohsin-lyart.vercel.app/
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_site.settings")  
+app = get_wsgi_application()
